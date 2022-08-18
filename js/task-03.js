@@ -25,7 +25,10 @@ ul.style.listStyle = "none";
 
 ul.insertAdjacentHTML(
   "afterbegin",
-  images.map((el) => {
-    return `<li><img src = ${el.url} alt = ${el.alt} witdh=320 height=240/></li>`;
-  })
+  images
+    .map((el) => {
+      return `<li><img src = ${el.url} alt = ${el.alt} witdh=320 height=240/></li>`;
+    })
+    .join(" ")
 );
+images.append(...ul);
